@@ -11,7 +11,7 @@ import random
 import os
 from dotenv import load_dotenv
 from concurrent.futures.thread import ThreadPoolExecutor
-from  uitl import random_string
+from uitl import random_string
 from faker import Faker
 
 load_dotenv()
@@ -54,7 +54,7 @@ class airdrop:
                 "address": self.account.address,
                 "blockchain": "ethereum"
             }
-        # print("123")
+
         for i in range(3):
             try:
                 response = self.session.post(url, headers=self.headers, json=data,proxies=self.proxy_pool, impersonate="chrome110")
@@ -151,12 +151,12 @@ def run(acc):
     op.claim(token)
 
 def read_file():
-    with open('acctest.txt', 'r', encoding="utf-8") as f:
+    with open('../redbrick/acctest.txt', 'r', encoding="utf-8") as f:
         a = f.readlines()
     return  a
 def save_local(info):
         thread.acquire()
-        with open("magic_cook.txt", "a+", encoding="utf-8") as f:
+        with open("../redbrick/magic_cook.txt", "a+", encoding="utf-8") as f:
                 f.write(info);
                 f.write('\n')
         thread.release()
@@ -168,7 +168,7 @@ def strat():
     print("delaytime",delaytime)
     time.sleep(10*delaytime*60)
     config['settings']['delaytime'] = str(delaytime+1)
-    with open('config.ini', 'w') as configfile:
+    with open('../redbrick/config.ini', 'w') as configfile:
         config.write(configfile)
     data =  read_file()
     count = len(data)
