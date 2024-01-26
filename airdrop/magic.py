@@ -1,7 +1,7 @@
 
 
 import time
-from curl_cffi import requests
+import  requests
 from eth_account.messages import encode_defunct
 from pop import ima
 from rpc import Rpc
