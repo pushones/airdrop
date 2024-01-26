@@ -151,12 +151,12 @@ def run(acc):
     op.claim(token)
 
 def read_file():
-    with open('../redbrick/acctest.txt', 'r', encoding="utf-8") as f:
+    with open('acctest.txt', 'r', encoding="utf-8") as f:
         a = f.readlines()
     return  a
 def save_local(info):
         thread.acquire()
-        with open("../redbrick/magic_cook.txt", "a+", encoding="utf-8") as f:
+        with open("magic_cook.txt", "a+", encoding="utf-8") as f:
                 f.write(info);
                 f.write('\n')
         thread.release()
