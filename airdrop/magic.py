@@ -168,7 +168,7 @@ def strat():
     print("delaytime",delaytime)
     time.sleep(10*delaytime*60)
     config['settings']['delaytime'] = str(delaytime+1)
-    with open('../redbrick/config.ini', 'w') as configfile:
+    with open('config.ini', 'w') as configfile:
         config.write(configfile)
     data =  read_file()
     count = len(data)
