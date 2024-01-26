@@ -20,7 +20,7 @@ thread = threading.Lock()
 os.environ['HTTP_PROXY'] = "http://127.0.0.1:10808"
 os.environ['HTTPS_PROXY'] = "http://127.0.0.1:10808"
 
-class rick:
+class airdrop:
     def __init__(self, account):
         self.account = account
         self.session = requests.Session()
@@ -145,7 +145,7 @@ def run(acc):
     prikey = data.split("----")[1]
     print(prikey)
     account = web3.Account.from_key(prikey)
-    op = rick(account)
+    op = airdrop(account)
     nonce = op.get_nonce()
     token = op.wallet(nonce)
     op.claim(token)
