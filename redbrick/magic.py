@@ -54,7 +54,7 @@ class airdrop:
                 "address": self.account.address,
                 "blockchain": "ethereum"
             }
-
+        # print("123")
         for i in range(3):
             try:
                 response = self.session.post(url, headers=self.headers, json=data,proxies=self.proxy_pool, impersonate="chrome110")
